@@ -278,8 +278,8 @@ export default function Profile() {
       </main>
 
       
-      <Box flex="70%" padding="10px">
-        <Box marginTop={12} marginLeft={-10} width="100%" textAlign="center">
+      <Box flex="70%" padding="10px" marginRight={10}>
+        <Box marginTop={12} width="100%" textAlign="center">
           <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
