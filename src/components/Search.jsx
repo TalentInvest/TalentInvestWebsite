@@ -169,8 +169,11 @@ export default function Search() {
                     </Box>
                   }
                   actionIcon={
-                    <IconButton href="/profile" aria-label={`info about ${tile[0]}`}>
-                      <StarBorderIcon className={gridClasses.icon} />
+                    <IconButton
+                      href="/profile"
+                      aria-label={`info about ${tile[0]}`}
+                    >
+                      <InfoIcon className={gridClasses.icon} />
                     </IconButton>
                   }
                 />
