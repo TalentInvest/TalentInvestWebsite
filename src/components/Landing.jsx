@@ -58,8 +58,8 @@ export default function Landing() {
                 </Button>        
             </Box>
 
-            <Box >
-                <img src="images/img1.png" width={600} style={{position: 'absolute', top: 100, right: 50}}/>
+            <Box>
+                <img src="images/img1.png" width={500} style={{position: 'absolute', top: 100, right: 0}}/>
             </Box>
 
             <Box fontSize={40} fontWeight={30} margin={2} textAlign="center">
@@ -68,7 +68,7 @@ export default function Landing() {
 
          
                         
-            <Box fontSize={16} marginLeft={50} marginRight={50} marginBottom={5} fontFamily="Helvetica" textAlign="center" fontWeight={9}>
+            <Box fontSize={16} marginLeft={30} marginRight={30} marginBottom={5} fontFamily="Helvetica" textAlign="center" fontWeight={9} width={700}>
                 We provide a marketplace for Students and Investors to connect and transition toward Income Sharing Agreements. 
                 With an ISA, we can help students attend the education of their dreams and give them the ability to defer payments until they land a secure job. 
                 We provide investors with the opportunity to make impactful decisions by directly supporting the next generation of talent, all 
