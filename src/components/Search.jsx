@@ -15,11 +15,11 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 
-const studentData = [["John Smith", "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "UC Berkeley", "5,000", 3], 
-    ["Steve Lobs", "https://images.pexels.com/photos/2325729/pexels-photo-2325729.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "Stanford", "12,000", 6], 
-    ["Michelle Chen", "https://images.pexels.com/photos/207569/pexels-photo-207569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "Harvard", "15,000", 2], 
-    ["Laura Gutierrez", "https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "UCSD", "10,000", 0], 
-    ["Sanjay Patel", "https://images.pexels.com/photos/3215733/pexels-photo-3215733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "University of Michigan", "4,000", 6]]
+const studentData = [["John S.", "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "UC Berkeley", "5,000", 3], 
+    ["Steve L.", "https://images.pexels.com/photos/2325729/pexels-photo-2325729.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "Stanford", "12,000", 6], 
+    ["Michelle C.", "https://images.pexels.com/photos/207569/pexels-photo-207569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "Harvard", "15,000", 2], 
+    ["Laura G.", "https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "UCSD", "10,000", 0], 
+    ["Sanjay P.", "https://images.pexels.com/photos/3215733/pexels-photo-3215733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "University of Michigan", "4,000", 6]]
 
 const useStyles = makeStyles((theme) => ({
     root: {
