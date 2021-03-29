@@ -92,6 +92,7 @@ export default function Landing() {
         fontWeight={9}
         marginLeft={40}
         marginRight={40}
+        marginBottom={2}
       >
         We provide a marketplace for Students and Investors to connect and
         transition toward Income Sharing Agreements. With an ISA, we can help
