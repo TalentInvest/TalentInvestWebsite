@@ -527,7 +527,6 @@ export default function Profile() {
                   <Input
                     label="Amount"
                     id="standard-adornment-amount"
-                    value={values.amount}
                     startAdornment={
                       <InputAdornment position="start">$</InputAdornment>
                     }
