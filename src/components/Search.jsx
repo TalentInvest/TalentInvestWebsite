@@ -20,14 +20,14 @@ const studentData = [
   [
     "John S.",
     "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    "UC Berkeley",
+    "Stanford",
     "5,000",
     3,
   ],
   [
     "Steve L.",
     "https://images.pexels.com/photos/2325729/pexels-photo-2325729.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    "Stanford",
+    "UC Berkeley",
     "12,000",
     6,
   ],
@@ -150,7 +150,7 @@ export default function Search() {
       </Box>
       <Box fontWeight="600" marginTop={6} marginLeft={10} fontSize={32}>
         Featured Students
-        <Box marginTop={2}>
+        <Box marginTop={2} marginRight={10}>
           <GridList className={gridClasses.gridList} cols={4.5} spacing={20}>
             {studentData.map((tile) => (
               <GridListTile>
@@ -169,7 +169,7 @@ export default function Search() {
                     </Box>
                   }
                   actionIcon={
-                    <IconButton aria-label={`info about ${tile[0]}`}>
+                    <IconButton href="/profile" aria-label={`info about ${tile[0]}`}>
                       <StarBorderIcon className={gridClasses.icon} />
                     </IconButton>
                   }
@@ -177,9 +177,6 @@ export default function Search() {
               </GridListTile>
             ))}
           </GridList>
-        </Box>
-        <Box fontWeight="600" marginTop={6} fontSize={32}>
-          New Sign-ups
         </Box>
       </Box>
     </Box>

@@ -358,8 +358,8 @@ export default function Profile() {
                   <Box>San Francisco, California</Box>
                 </Box>
                 <Box marginTop={6} marginRight={2}>
-                  <Button variant="contained" color="secondary">
-                    Add Section
+                  <Button variant="contained" color="primary">
+                    Send Message
                   </Button>
                   <Box marginTop={2}></Box>
                   <Button variant="contained" color="default">
@@ -582,7 +582,7 @@ export default function Profile() {
                     </div>
                   </Grid>
                 </Box>
-
+                <Box marginTop={3} />
                 <Divider />
                 <Box fontSize={16} marginTop={4} marginBottom={3}>
                   <b>Cost Breakdown</b>
