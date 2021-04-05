@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef } from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
@@ -47,6 +47,7 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import InputAdornment from "@material-ui/core/InputAdornment";
+import { Link } from "react-router-dom";
 const drawerWidth = 240;
 
 function valuetext(value) {
@@ -176,6 +177,7 @@ const useStyles5 = makeStyles((theme) => ({
 }));
 
 function CircularProgressWithLabel(props) {
+  
   return (
     <Box position="relative" display="inline-flex">
       <CircularProgress variant="determinate" {...props} />
@@ -218,6 +220,7 @@ function renderIcon(index) {
   }
 }
 
+
 export default function Profile() {
   const classes = useStyles();
   const classes1 = useStyles1();
@@ -243,14 +246,21 @@ export default function Profile() {
   const handleChange4 = (panel) => (event, newExpanded) => {
     setExpanded4(newExpanded ? panel : false);
   };
-
+  
   const [dense, setDense] = React.useState(false);
   const [secondary, setSecondary] = React.useState(false);
 
+  const [data, setData] = React.useState(null);
   const [values, setValues] = React.useState({
     amount: "",
   });
+  
 
+  function getValue(val)
+  {
+    setData(val.target.value)
+  }
+ 
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -525,16 +535,23 @@ export default function Profile() {
               <Paper className={classesGrid.paper}>
                 <Box display="flex">
                   <Input
+                    
                     label="Amount"
                     id="standard-adornment-amount"
                     startAdornment={
                       <InputAdornment position="start">$</InputAdornment>
                     }
+                    onChange={getValue}
                   />
                   <Box margin={1}>
-                    <Button variant="contained" color="primary">
-                      Invest
-                    </Button>
+                    <Link to={ 
+                      {
+                        pathname: "/investments",
+                        state: {value: data}
+                      }
+                    }>
+                  <Button variant="contained" color="primary">Invest</Button>
+                  </Link>
                   </Box>
                 </Box>
                 <Box

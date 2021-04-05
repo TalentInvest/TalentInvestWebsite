@@ -58,7 +58,7 @@ export default function Landing() {
         Better Student Financing with Income Sharing Agreements - The new
         Investment Class
         <Box
-          fontSize={12}
+          fontSize={16}
           color="gray.200"
           marginTop={3}
           marginBottom={2}
