@@ -543,15 +543,27 @@ export default function Profile() {
                     }
                     onChange={getValue}
                   />
-                  <Box margin={1}>
+                  <Box margin={1}>                  
                     <Link to={ 
                       {
                         pathname: "/investments",
                         state: {value: data}
                       }
                     }>
-                  <Button variant="contained" color="primary">Invest</Button>
-                  </Link>
+                      {/* <TxButton
+                      accountPair={accountPair}
+                      label='Submit'
+                      type='SIGNED-TX'
+                      setStatus={setStatus}
+                      attrs={{
+                        palletRpc: 'balances',
+                        callable: 'transfer',
+                        inputParams: [addressTo, amount],
+                        paramFields: [true, true]
+                      }}
+                      /> */}
+                      {/* <Button variant="contained" color="primary">Invest</Button> */}
+                    </Link>
                   </Box>
                 </Box>
                 <Box

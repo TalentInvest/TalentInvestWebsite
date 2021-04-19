@@ -54,7 +54,7 @@ export default function Landing() {
         </Toolbar>
       </AppBar>
 
-      <Box fontSize={32} fontWeight="bold" length={50} width={600} margin={10}>
+      <Box fontSize={28} fontWeight="bold" length={70} width={600} margin={10}>
         Better Student Financing with Income Sharing Agreements - The new
         Investment Class
         <Box

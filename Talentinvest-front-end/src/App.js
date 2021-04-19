@@ -9,6 +9,8 @@ import Search from './components/Search.jsx'
 import Investments from "./components/Investments.jsx"
 import Return from "./components/Return.jsx"
 import Export from "./components/Export.jsx"
+import Investor from "./components/Investor.jsx"
+
 
 export default function App() {
   return (
@@ -21,7 +23,7 @@ export default function App() {
         <Route exact path="/investments" component={Investments} />
         <Route exact path="/return" component={Return} />
         <Route exact path="/export" component={Export} />
-
+        <Route exact path="/investorprofile" component={Investor} />
       </Router>
     </div>
     

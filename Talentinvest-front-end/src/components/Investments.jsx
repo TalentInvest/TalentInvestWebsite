@@ -76,13 +76,11 @@ function Investments(props) {
               </Button>
             </Box>
             <Box px={2} pt={1}>
-              <Button variant="contained" color="primary" >
+              <Button variant="contained" color="primary">
                 Back to Profile
               </Button>
-            </Box>
-            
-          </Box>
-            
+            </Box>         
+          </Box>            
         </Box>
       </Box>
     )
