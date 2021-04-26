@@ -52,16 +52,13 @@ function Investments(props) {
           </Button>
           <Button color="inherit">Testimonials</Button>
           <Button color="inherit">About Us</Button>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
+          <Button color="inherit" href="/export">My Profile</Button>        
+          </Toolbar>
         </AppBar>
         <Box ml={20} mt={10}>
           <Box fontSize={48}>
                 {/* {value} */}
-                Successfully invested ${value} into Steve Lobs!
-          </Box>
-          <Box fontSize={48}>
-            Your current balance is: $
+                Successfully invested ${value} into Dave Lobs!
           </Box>
           <Box>
             <Box fontSize={36} mt={10}>What's Next?</Box>
@@ -76,7 +73,7 @@ function Investments(props) {
               </Button>
             </Box>
             <Box px={2} pt={1}>
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary" href="/export">
                 Back to Profile
               </Button>
             </Box>         

@@ -25,7 +25,7 @@ const studentData = [
     3,
   ],
   [
-    "Steve L.",
+    "Dave L.",
     "https://images.pexels.com/photos/2325729/pexels-photo-2325729.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     "UC Berkeley",
     "12,000",
@@ -121,7 +121,7 @@ export default function Search() {
           </Button>
           <Button color="inherit">Testimonials</Button>
           <Button color="inherit">About Us</Button>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" href="/export">My Profile</Button>
         </Toolbar>
       </AppBar>
       <br />

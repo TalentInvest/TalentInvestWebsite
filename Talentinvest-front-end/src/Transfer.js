@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Input, Grid, Label, Icon } from 'semantic-ui-react';
 import { TxButton } from './substrate-lib/components';
+import { Link } from "react-router-dom";
+
 
 export default function Main (props) {
   const [status, setStatus] = useState(null);
@@ -14,12 +16,18 @@ export default function Main (props) {
 
   return (
     <Grid.Column width={8}>
-      <h1>Transfer</h1>
+      <h1>Invest</h1>
       <Form>
         <Form.Field>
           <Label basic color='teal'>
             <Icon name='hand point right' />
-            1 Unit = 1000000000000&nbsp;
+            {/* 1 Unit = 1000000000000&nbsp; */}
+            1 Unit = $10
+
+          </Label>
+          <Label basic color='teal'>
+            <Icon name='hand point right' />
+            1 kUnit = $10000
           </Label>
           <Label basic color='teal' style={{ marginLeft: 0, marginTop: '.5em' }}>
             <Icon name='hand point right' />
@@ -30,7 +38,7 @@ export default function Main (props) {
         <Form.Field>
           <Input
             fluid
-            label='To'
+            label='Student Address'
             type='text'
             placeholder='address'
             state='addressTo'
@@ -40,13 +48,19 @@ export default function Main (props) {
         <Form.Field>
           <Input
             fluid
-            label='Amount'
+            label='Amount (USD)'
             type='number'
             state='amount'
             onChange={onChange}
           />
         </Form.Field>
         <Form.Field style={{ textAlign: 'center' }}>
+        <Link to={ 
+                      {
+                        pathname: "/investments",
+                        state: {value: formState.amount}
+                      }
+                    }>
           <TxButton
             accountPair={accountPair}
             label='Submit'
@@ -55,10 +69,11 @@ export default function Main (props) {
             attrs={{
               palletRpc: 'balances',
               callable: 'transfer',
-              inputParams: [addressTo, amount],
+              inputParams: [addressTo, 100000000000 * amount],
               paramFields: [true, true]
             }}
           />
+          </Link>
         </Form.Field>
         <div style={{ overflowWrap: 'break-word' }}>{status}</div>
       </Form>

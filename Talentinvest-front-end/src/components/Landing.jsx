@@ -50,13 +50,14 @@ export default function Landing() {
           </Button>
           <Button color="inherit">Testimonials</Button>
           <Button color="inherit">About Us</Button>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" href="/export">My Profile</Button>
         </Toolbar>
       </AppBar>
 
-      <Box fontSize={28} fontWeight="bold" length={70} width={600} margin={10}>
-        Better Student Financing with Income Sharing Agreements - The new
-        Investment Class
+      <Box fontSize={28} fontWeight="bold" length={70} width={900} margin={10}>
+        <Box>Better Student Financing with Income Sharing Agreements</Box>
+        <br/>
+        <Box>The NEW Investment Class</Box>
         <Box
           fontSize={16}
           color="gray.200"

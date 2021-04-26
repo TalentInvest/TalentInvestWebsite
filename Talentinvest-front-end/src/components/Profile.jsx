@@ -1,4 +1,4 @@
-import React, { createRef } from "react";
+import React, { createRef, useState } from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
@@ -48,6 +48,11 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import { Link } from "react-router-dom";
+
+import { SubstrateContextProvider, useSubstrate } from "../substrate-lib";
+import { TxButton } from '../substrate-lib/components';
+
+
 const drawerWidth = 240;
 
 function valuetext(value) {
@@ -233,6 +238,16 @@ export default function Profile() {
   const [expanded3, setExpanded3] = React.useState("panel3");
   const [expanded4, setExpanded4] = React.useState("panel4");
 
+  const [accountAddress, setAccountAddress] = useState(null);
+  const [status, setStatus] = useState(null);
+  const { apiState, keyring, keyringState, apiError } = useSubstrate();
+  // setAccountAddress("5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw");
+  const accountPair =
+  "5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw" &&
+    keyringState === "READY" &&
+    keyring.getPair("5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw");
+
+
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
@@ -304,7 +319,7 @@ export default function Profile() {
           <Button color="inherit">Find Mentors</Button>
           <Button color="inherit">Messaging</Button>
           <Button color="inherit">Notifications</Button>
-          <Button color="inherit">My Profile</Button>
+          <Button color="inherit" href="/export">My Profile</Button>
         </Toolbar>
       </AppBar>
 
@@ -358,7 +373,7 @@ export default function Profile() {
                   </Box>
 
                   <Box fontSize={20} fontWeight="bold">
-                    Steve Lobs
+                    Dave Lobs
                     <Divider />
                   </Box>
 
@@ -534,7 +549,7 @@ export default function Profile() {
             <Grid item xs={12}>
               <Paper className={classesGrid.paper}>
                 <Box display="flex">
-                  <Input
+                  {/* <Input
                     
                     label="Amount"
                     id="standard-adornment-amount"
@@ -542,12 +557,13 @@ export default function Profile() {
                       <InputAdornment position="start">$</InputAdornment>
                     }
                     onChange={getValue}
-                  />
+                  /> */}
                   <Box margin={1}>                  
                     <Link to={ 
                       {
-                        pathname: "/investments",
-                        state: {value: data}
+                        // pathname: "/investments",
+                        // state: {value: data}
+                        pathname: "/export",
                       }
                     }>
                       {/* <TxButton
@@ -558,11 +574,11 @@ export default function Profile() {
                       attrs={{
                         palletRpc: 'balances',
                         callable: 'transfer',
-                        inputParams: [addressTo, amount],
+                        inputParams: ["5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty", 1000000000000],
                         paramFields: [true, true]
                       }}
                       /> */}
-                      {/* <Button variant="contained" color="primary">Invest</Button> */}
+                      <Button variant="contained" color="primary">Invest</Button>
                     </Link>
                   </Box>
                 </Box>

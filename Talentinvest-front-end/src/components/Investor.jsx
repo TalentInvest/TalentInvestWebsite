@@ -37,7 +37,7 @@ const columns = [
 ];
 
 const rows = [
-  { id: 1, lastName: 'Lobs', firstName: 'Steve', age: 19, investment: 2100 },
+  { id: 1, lastName: 'Lobs', firstName: 'Dave', age: 19, investment: 2100 },
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -81,7 +81,7 @@ export default function Investor() {
             </Button>
             <Button color="inherit">Testimonials</Button>
             <Button color="inherit">About Us</Button>
-            <Button color="inherit">Login</Button>
+            <Button color="inherit" href="/export">My Profile</Button>
             </Toolbar>
         </AppBar>
         <Box fontSize={32} mt={3} mb={3} pl={4}>My Investments</Box>
